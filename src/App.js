@@ -1,6 +1,9 @@
 import React, {useState} from "react";
 import Expenses from './components/Expenses/Expenses';
 import NewExpense from "./components/NewExpense/NewExpense";
+import LoginButton from "./components/Login/LoginButton";
+import LogoutButton from "./components/Login/LogoutButton";
+import Profile from "./components/Login/Profile";
 
 const INITIAL_VALUE = [
     {
@@ -35,6 +38,9 @@ function App() {
 
     return (
         <div>
+            <LoginButton/>
+            <LogoutButton/>
+            <Profile/>
             <NewExpense onAddExpense = {addExpenseHandler}/>
             <Expenses items = {expenses}/>
         </div>
